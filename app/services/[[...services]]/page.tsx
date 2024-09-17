@@ -9,7 +9,7 @@ const services = async () => {
     const user = await currentUser();
 
     if (!isAuth) {
-        redirect("/");
+        redirect("/sign-in");
     }
 
     return (

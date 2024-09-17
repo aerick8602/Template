@@ -4,6 +4,8 @@ import "./globals.css";
 import { ClerkProvider, ClerkLoaded, ClerkLoading } from "@clerk/nextjs";
 import Navbar from "@/components/Navbar";
 import { dark } from "@clerk/themes";
+import Loader from "./Loader";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -21,16 +23,12 @@ export default function RootLayout({
       <html lang="en">
         <body className={inter.className}>
           <ClerkLoading>
-            <div className="flex items-center justify-center h-screen text-2xl">
-              Loading...
-            </div>
+            <Loader />
           </ClerkLoading>
           <ClerkLoaded>
-            <div>
-              <div className="flex flex-col h-screen">
-                <Navbar />
-                {children}
-              </div>
+            <div className="flex flex-col h-screen">
+              <Navbar />
+              {children}
             </div>
           </ClerkLoaded>
         </body>
