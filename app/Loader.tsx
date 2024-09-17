@@ -3,10 +3,10 @@
 import { useState, useEffect } from "react";
 import { FadeLoader } from "react-spinners";
 
+
 const Loader: React.FC = () => {
     const [loading, setLoading] = useState(true);
     const [color, setColor] = useState<string>("#169dad");
-    const [size, setSize] = useState<number>(150);
 
     useEffect(() => {
         const timer = setTimeout(() => {
