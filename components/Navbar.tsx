@@ -41,7 +41,7 @@ export default async function Navbar() {
         ) : (
           <div className="flex items-center gap-2">
             <UserButton />
-            <span className="hover:underline font-bold text-gray-800 text-lg">{user?.username}</span>
+            <span className="hover:underline font-bold text-gray-800 text-lg">{user?.firstName}</span>
           </div>
         )}
       </div>
